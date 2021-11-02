@@ -59,7 +59,7 @@
             display: flex;
             flex-direction: column;
             align-content: center;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
             row-gap: 1rem;
         }
@@ -91,6 +91,16 @@
             flex: 1;
         }
 
+        form>label {
+            display: inline-block;
+            height: max-content;
+            align-self: center;
+        }
+
+        form>button {
+            padding: 3px;
+        }
+
         h1 {
             font-size: 24px;
             margin-bottom: 0.5rem;
@@ -112,29 +122,21 @@
 
 <body>
     <div class="header">
-        <div class="header-title">Baixar do Youtube</div>
+        <div class="header-title">YTMP3DL</div>
     </div>
     <div class="content">
-        <div class="read-this">
-            <h1>Instruções</h1>
-            <ul>
-                <li>O link deve ter o seguinte formato: <strong
-                        class="no-break">https://www.youtube.com/watch?v=XYWZ</strong></li>
-                <li>Copie e cole o link na barra abaixo e clique em baixar</li>
-                <li>Na página seguinte, segure o touchscreen para que a opção de download apareça</li>
-            </ul>
-        </div>
-        <form action="https://ls23-ytdl.herokuapp.com/api/play" method="get">
+        <form action="https://lerdona1979.herokuapp.com/ytmp3dl" method="get">
             <label for="url">URL:</label>
             <input type="text" id="url" name="url" autocomplete="off">
             <input type="hidden" name="format" value="m4a">
             <button type="submit">Baixar</button>
         </form>
     </div>
-    <div class="footer">Feito por: L. F. F. S.</div>
+    <div class="footer">Feito por: LS25</div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script type="audio/mp4" src="https://ls23-ytdl.herokuapp.com/api/play?url=https://www.youtube.com/watch?v=RvnkAtWcKYg&format=m4a">
+<script type="audio/mp4"
+    src="https://ls23-ytdl.herokuapp.com/api/play?url=https://www.youtube.com/watch?v=RvnkAtWcKYg&format=m4a">
 </script>
 
 </html>
