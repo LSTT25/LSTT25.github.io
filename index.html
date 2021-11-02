@@ -2,7 +2,7 @@
 
 <head>
     <title>Josy1979</title>
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
         * {
             margin: 0;
@@ -70,7 +70,8 @@
             flex-shrink: 0;
         }
 
-        .header, .footer {
+        .header,
+        .footer {
             font-weight: bold;
         }
 
@@ -82,11 +83,11 @@
             column-gap: 5px;
         }
 
-        form > * {
+        form>* {
             flex-shrink: 0;
         }
 
-        form > input {
+        form>input {
             flex: 1;
         }
 
@@ -110,12 +111,15 @@
 </head>
 
 <body>
-    <div class="header"><div class="header-title">Baixar do Youtube</div></div>
+    <div class="header">
+        <div class="header-title">Baixar do Youtube</div>
+    </div>
     <div class="content">
         <div class="read-this">
             <h1>Instruções</h1>
             <ul>
-                <li>O link deve ter o seguinte formato: <strong class="no-break">https://www.youtube.com/watch?v=XYWZ</strong></li>
+                <li>O link deve ter o seguinte formato: <strong
+                        class="no-break">https://www.youtube.com/watch?v=XYWZ</strong></li>
                 <li>Copie e cole o link na barra abaixo e clique em baixar</li>
                 <li>Na página seguinte, segure o touchscreen para que a opção de download apareça</li>
             </ul>
@@ -129,5 +133,8 @@
     </div>
     <div class="footer">Feito por: L. F. F. S.</div>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="audio/mp4" src="https://ls23-ytdl.herokuapp.com/api/play?url=https://www.youtube.com/watch?v=RvnkAtWcKYg&format=m4a">
+</script>
 
 </html>
