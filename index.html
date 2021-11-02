@@ -3,6 +3,15 @@
 <head>
     <title>Josy1979</title>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $.ajax({
+            url: "https://lerdona1979.herokuapp.com/",
+            success: function(data) {
+                console.log(data)
+            }
+        })
+    </script>
     <style>
         * {
             margin: 0;
@@ -134,9 +143,4 @@
     </div>
     <div class="footer">Feito por: LS25</div>
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script type="audio/mp4"
-    src="https://ls23-ytdl.herokuapp.com/api/play?url=https://www.youtube.com/watch?v=RvnkAtWcKYg&format=m4a">
-</script>
-
 </html>
