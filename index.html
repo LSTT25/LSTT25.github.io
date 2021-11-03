@@ -1,5 +1,4 @@
 <html>
-
 <head>
     <title>Josy1979</title>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -142,4 +141,13 @@
     </div>
     <div class="footer">Feito por: LS25</div>
 </body>
+<script>
+    $("#url").on("input", function () {
+        let url = $("#url").val()
+        const ampersand = url.indexOf("&")
+        if (ampersand != -1)
+            url = url.substr(0, ampersand)
+        $("#url").val(url)
+    })
+</script>
 </html>
