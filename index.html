@@ -3,14 +3,6 @@
     <title>Josy1979</title>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-        $.ajax({
-            url: "https://lerdona1979.herokuapp.com/",
-            success: function(data) {
-                console.log(data)
-            }
-        })
-    </script>
     <style>
         * {
             margin: 0;
@@ -133,6 +125,8 @@
         <div class="header-title">YTM4ADL</div>
     </div>
     <div class="content">
+        <!-- form action="http://localhost:3000/ytm4adl" method="get"-->
+        <!-- form action="https://lerdona1979.herokuapp.com/ytm4adl" method="get"-->
         <form action="https://lerdona1979.herokuapp.com/ytm4adl" method="get">
             <label for="url">URL:</label>
             <input type="text" id="url" name="url" autocomplete="off">
