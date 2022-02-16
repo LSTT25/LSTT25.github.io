@@ -138,8 +138,8 @@
     <div class="content">
         <form action="https://lerdona1979.herokuapp.com/ytm4adl" method="get">
             <label for="url">URL:</label>
-            <input type="text" id="url" name="url" autocomplete="off">
-            <button type="submit">Baixar</button>
+            <input type="text" id="url" name="url" autocomplete="off" disabled>
+            <button type="submit" disabled>Baixar</button>
         </form>
         <div id="api-error">
             <p>Erro na API. Atualize a página ou tente mais tarde.</p>
@@ -159,7 +159,6 @@
     let wakeUpTries = 0
 
     let wakeUpServer = async () => {
-        $("button, input").prop("disabled", true)
         await $.ajax({
             type: "GET",
             dataType: "html",
