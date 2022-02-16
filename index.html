@@ -120,6 +120,14 @@
         ul {
             padding-left: 1rem;
         }
+
+        #api-error {
+            display: none;
+            text-align: center;
+            color: red;
+            font-weight: bold;
+            font-size: 1em;
+        }
     </style>
 </head>
 
@@ -133,6 +141,9 @@
             <input type="text" id="url" name="url" autocomplete="off">
             <button type="submit">Baixar</button>
         </form>
+        <div id="api-error">
+            <p>Erro na API. Atualize a página ou tente mais tarde.</p>
+        </div>
     </div>
     <div class="footer">Feito por: LS25</div>
 </body>
@@ -145,20 +156,31 @@
         $("#url").val(url)
     })
 
-    $(document).ready(async () => {
+    let wakeUpTries = 0
+
+    let wakeUpServer = async () => {
+        $("button, input").prop("disabled", true)
         await $.ajax({
             type: "GET",
             dataType: "html",
             url: "https://lerdona1979.herokuapp.com/",
             success: function (result) {
                 console.log("ready")
+                $("button, input").prop("disabled", false)
             },
             error: function (result) {
                 console.log("error:", result)
+                wakeUpTries += 1
+                if (wakeUpTries <= 2)
+                    wakeUpServer()
+                else
+                    $("#api-error").show()
             },
             timeout: 5000
         })
-    }) 
+    }
+
+    $(document).ready(wakeUpServer) 
 </script>
 
 </html>
